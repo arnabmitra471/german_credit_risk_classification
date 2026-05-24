@@ -39,4 +39,5 @@ Due to the dataset's class imbalance, performance was evaluated via a detailed c
 ## 🚀 How to Run Locally
 1. Clone the repository:
 ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
+   git clone https://github.com/arnabmitra471/german_credit_risk_classification.git
+```
