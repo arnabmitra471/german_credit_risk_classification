@@ -2,16 +2,16 @@
 
 A machine learning pipeline developed to classify credit applicants as "Good" or "Bad" risk using an optimized $k$-Nearest Neighbors (KNN) framework. This project focuses heavily on handling class imbalances, analyzing the Bias-Variance tradeoff, and tuning hyperparameters via systematic cross-validation.
 
-## 📌 Project Overview
+##  Project Overview
 Credit scoring is inherently imbalanced; the cost of misclassifying a "Bad" risk applicant (default) is significantly higher than missing out on a "Good" risk applicant. This project implements a fully reproducible end-to-end workflow—from categorical encoding and feature scaling to model optimization.
 
-## 🛠️ Tech Stack & Workflow
+##  Tech Stack & Workflow
 - **Languages & Libraries:** Python, Scikit-Learn, NumPy, Pandas, Matplotlib
 - **Preprocessing:** Categorical Label Encoding, Feature Standardization ($\mu=0, \sigma=1$)
 - **Algorithm:** $k$-Nearest Neighbors (KNN)
 - **Optimization Strategy:** Grid-search style hyperparameter selection using the maximum mean Cross-Validation (CV) score.
 
-## 📊 The Bias-Variance Tradeoff & Optimization
+##  The Bias-Variance Tradeoff & Optimization
 During hyperparameter tuning, a clear Bias-Variance Tradeoff was observed as the number of neighbors ($k$) varied:
 - **Low $k$ (High Variance):** The model overfits the training data, capturing local noise and generating complex decision boundaries (high training accuracy, poor generalization).
 - **High $k$ (High Bias):** Training accuracy steadily decreases as $k$ increases because the model averages over a larger neighborhood, smoothing out crucial minority class patterns.
@@ -20,7 +20,7 @@ To optimize this, the final hyperparameter selection was mathematically defined 
 
 $$\hat{k} = \arg\max_{k} \text{MeanCVScore}(k)$$
 
-## 📈 Model Performance & Metrics
+## Model Performance & Metrics
 Due to the dataset's class imbalance, performance was evaluated via a detailed classification report rather than relying blindly on overall accuracy.
 
 ### Encoding Reference:
